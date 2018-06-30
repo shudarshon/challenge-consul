@@ -1,0 +1,4 @@
+# dependencies
+ - jq
+ - ansible
+ - terraform

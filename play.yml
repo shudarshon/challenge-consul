@@ -1,0 +1,8 @@
+---
+
+- hosts: host
+  become: yes
+  become_method: sudo
+
+  roles:
+    - consul

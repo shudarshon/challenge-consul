@@ -1,2 +1,3 @@
-# challenge-consul
-this repository will provide you learning opportunity of implementing consul cluster in cloud
+# how to use
+
+You need to install ansible in order to learn this series. Using ansible we will automate the implementation of consul cluster in cloud.
