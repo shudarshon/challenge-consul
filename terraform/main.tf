@@ -56,6 +56,10 @@ resource "null_resource" "ModifyApplyAnsiblePlayBook" {
   }
 
   provisioner "local-exec" {
+    command = "sed -i -e '/bootstrap_expect/ s/: .*/: ${var.instance_count},/' ../roles/consul/templates/bootstrap.json.j2"   #change number of hosts in consul configuration
+  }
+
+  provisioner "local-exec" {
     command = "cd ../roles/consul/ && /bin/bash ./bootstrap.sh"   #change consul server private ip configuration
   }
 
