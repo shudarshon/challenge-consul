@@ -10,7 +10,7 @@ After=network-online.target
 EnvironmentFile=-/etc/sysconfig/consul
 Environment=GOMAXPROCS=2
 Restart=on-failure
-ExecStart="{{ consul_path }}/consul" agent $OPTIONS -config-dir=/etc/consul.d/server
+ExecStart="{{ consul_path }}/consul" agent $OPTIONS -config-dir=/etc/consul.d/server -ui
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGINT
 TimeoutStopSec=3

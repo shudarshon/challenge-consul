@@ -6,13 +6,14 @@
   "encrypt": "{{ consul_security_token }}",
   "log_level": "INFO",
   "enable_syslog": true,
-  "leave_on_terminate": false,
+  "leave_on_terminate": true,
   "skip_leave_on_interrupt": true,
   "rejoin_after_leave": true,
   "retry_interval": "30s",
+  "client_addr": "0.0.0.0",
   "start_join": [
-    "172.31.95.241:8301",
-    "172.31.85.232:8301",
-    "172.31.81.121:8301"
+    "172.31.93.109:8301",
+    "172.31.89.153:8301",
+    "172.31.90.240:8301"
   ]
 }

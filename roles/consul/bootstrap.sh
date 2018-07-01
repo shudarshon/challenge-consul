@@ -1,5 +1,5 @@
 #!/bin/bash
-ipaddr=`cat ./hosts | cut -d ' ' -f 3- | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^/"/' |sed 's/$/:8301",/' | sed '$ s/.$//'`
+ipaddr=`cat ../../hosts | cut -d ' ' -f 3- | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^/"/' |sed 's/$/:8301",/' | sed '$ s/.$//'`
 file=./templates/bootstrap.json.j2
 #cat ./hosts | cut -d ' ' -f 3- | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sed 's/^/"/' |sed 's/$/:8301",/' | sed '$ s/.$//' > ./ip
 #ipaddr=`cat ./ip`
