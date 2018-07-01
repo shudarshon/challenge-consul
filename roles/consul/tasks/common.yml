@@ -57,8 +57,8 @@
   file:
     path: "{{ item }}"
     state: directory
-    owner: root
-    group: root
+    owner: "{{ consul_user }}"
+    group: "{{ consul_group }}"
     recurse: no
   with_items:
     - "{{ consul_data_dir }}"
@@ -72,6 +72,8 @@
   template:
     src: "bootstrap.json.j2"
     dest: "{{ consul_server_config_dir }}/config.json"
+    owner: "{{ consul_user }}"
+    group: "{{ consul_group }}"
   tags: [copy_server_config]
 
 # Installing systemd script for managing consul service

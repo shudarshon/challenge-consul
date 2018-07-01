@@ -4,9 +4,9 @@ Requires=network-online.target
 After=network-online.target
 
 [Service]
-#User="{{ consul_user }}"
-#Group="{{ consul_group }}"
-#PIDFile=/run/consul.pid
+User={{ consul_user }}
+Group={{ consul_group }}
+PIDFile=/run/consul.pid
 EnvironmentFile=-/etc/sysconfig/consul
 Environment=GOMAXPROCS=2
 Restart=on-failure
