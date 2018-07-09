@@ -8,7 +8,7 @@ User={{ consul_user }}
 Group={{ consul_group }}
 PIDFile=/run/consul.pid
 EnvironmentFile=-/etc/sysconfig/consul
-Environment=GOMAXPROCS=2
+Environment="GOMAXPROCS=`nproc`"
 Restart=on-failure
 ExecStart="{{ consul_path }}/consul" agent $OPTIONS -config-dir=/etc/consul.d/server -ui
 ExecReload=/bin/kill -HUP $MAINPID
